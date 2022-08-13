@@ -1,0 +1,92 @@
+body {
+    color: white;
+    background-color: black;
+    font-family:  'Archivo', sans-serif, 'NanumSquareBold', 'NanumSquareExtraBold';
+    font-size: 1rem;
+    font-weight: 400;
+    overflow-y: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 10px;
+    padding: 5px 15px;
+}
+.weather-container span {
+    margin-right: -1px;
+    white-space: nowrap; 
+}
+.weather-container .weather {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+.weather-container .area {
+    font-size: 0.8rem;
+    margin-right: 18px;
+}
+
+.clock-container {
+    height: 15vw;
+    text-align: center;
+    line-height: 20vw;
+}
+.clock-container span {
+    font-size: 10rem;
+    font-weight: 500;
+}
+
+.greeting-container {
+    font-size: 3rem;
+    text-align: center;
+}
+.greeting-container .login-name{
+    width: 650px;
+}
+.input-Style{
+    border-style: none;
+    border-bottom: 2px solid white;
+    background-color:transparent;
+    font-size: 3rem;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    outline: none;
+}
+.hidden {
+    display: none;
+}
+.todo-container {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+.todo-container .todo-input {
+    width: 500px;
+}
+
+.todo-container ul {
+   margin-top: 20px;
+ }
+.todo-container li {
+   display: flex;
+   justify-content: center;
+}
+.todo-container li span{
+   text-align: center;
+ }
+.todo-container input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.quote-container {
+    height: 7vw;
+    text-align: center;
+    line-height: 7vw;
+}
