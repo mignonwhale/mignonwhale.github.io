@@ -18,7 +18,7 @@ function onGeoOk(position) {
         const imoticon = document.createElement('i');
         imoticon.className = emoji[weatherNm.findIndex(e => e == data.weather[0].main)];
         imoticonSpan.append(imoticon);
-        temp.innerText = Math.floor(data.main.temp);
+        temp.innerText = `${Math.floor(data.main.temp)}°`;
         area.innerText = data.name;
     });
 

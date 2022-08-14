@@ -1,16 +1,20 @@
 body {
     color: white;
     background-color: black;
-    font-family:  'Archivo', sans-serif, 'NanumSquareBold', 'NanumSquareExtraBold';
+    font-family: 'Archivo', sans-serif, 'NanumSquareBold', 'NanumSquareExtraBold';
     font-size: 1rem;
     font-weight: 400;
     overflow-y: hidden;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
 
+.hidden {
+    display: none;
+}
 
 .weather-container {
     display: flex;
@@ -19,14 +23,17 @@ body {
     margin: 10px;
     padding: 5px 15px;
 }
+
 .weather-container span {
     margin-right: -1px;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
+
 .weather-container .weather {
     font-size: 1.8rem;
     margin-bottom: 5px;
 }
+
 .weather-container .area {
     font-size: 0.8rem;
     margin-right: 18px;
@@ -37,6 +44,7 @@ body {
     text-align: center;
     line-height: 20vw;
 }
+
 .clock-container span {
     font-size: 10rem;
     font-weight: 500;
@@ -46,47 +54,61 @@ body {
     font-size: 3rem;
     text-align: center;
 }
-.greeting-container .login-name{
+
+.greeting-container .login-name {
     width: 650px;
 }
-.input-Style{
+
+.input-Style {
     border-style: none;
     border-bottom: 2px solid white;
-    background-color:transparent;
+    background-color: transparent;
     font-size: 3rem;
     margin-top: 5px;
     color: white;
     text-align: center;
     outline: none;
 }
-.hidden {
-    display: none;
-}
+
 .todo-container {
     font-size: 2rem;
     text-align: center;
     margin-top: 50px;
 }
+
 .todo-container .todo-input {
     width: 500px;
 }
 
-.todo-container ul {
-   margin-top: 20px;
- }
-.todo-container li {
-   display: flex;
-   justify-content: center;
+.todo-container .todo-info {
+    margin-top: 10px;
 }
-.todo-container li span{
-   text-align: center;
- }
-.todo-container input[type=checkbox] {
+
+.todo-container ul {
+    margin-top: 20px;
+}
+
+.todo-container li i {
     margin-right: 10px;
 }
 
-.quote-container {
-    height: 7vw;
+.todo-container li span {
     text-align: center;
-    line-height: 7vw;
+}
+
+.todo-container .todo-clear-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.todo-container .todo-clear-row .clear-i {
+    margin-right: 10px;
+    color: red;
+}
+
+.quote-container {
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
 }

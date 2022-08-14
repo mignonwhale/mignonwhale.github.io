@@ -2,9 +2,9 @@ const loginForm = document.querySelector('#login-form'); // required, maxlengthì
 const loginName = document.querySelector('#login-name');
 const greeting = document.querySelector('#greeting');
 
-const weatherContainer = document.querySelector('.weather-container');
+const weatherWrap = document.querySelector('.weather-wrap');
 const clockSpan2 = document.querySelector('#clock');
-const todoForm2 = document.querySelector('#todo-form');
+const todoContainer = document.querySelector('.todo-container');
 const quoteContainer = document.querySelector('.quote-container');
 
 const HIDDEN_CLASSNAME = 'hidden';
@@ -20,10 +20,10 @@ function onLoginSubmit(event) {
 
 function paintGreetings(username) {
     greeting.innerText = `Hello, ${username}`; 
-    weatherContainer.classList.remove(HIDDEN_CLASSNAME);
+    weatherWrap.classList.remove(HIDDEN_CLASSNAME);
     greeting.classList.remove(HIDDEN_CLASSNAME);
     clockSpan2.classList.remove(HIDDEN_CLASSNAME);
-    todoForm2.classList.remove(HIDDEN_CLASSNAME);    
+    todoContainer.classList.remove(HIDDEN_CLASSNAME);    
     quoteContainer.classList.remove(HIDDEN_CLASSNAME);    
 }
 

@@ -17,13 +17,14 @@
 </head>
 
 <body>
-    <div class="weather-container hidden">
-        <div class="weather">
-            <span id="imoticon"></span>
-            <span id="temp"></span>
-            <span>°</span>
+    <div class="weather-wrap hidden">
+        <div class="weather-container ">
+            <div class="weather">
+                <span id="imoticon"></span>
+                <span id="temp"></span>
+            </div>
+            <span class="area" id="area"></span>
         </div>
-        <span class="area" id="area"></span>
     </div>
     <div class="clock-container">
         <span id="clock" class="hidden"></span>
@@ -34,20 +35,25 @@
             <input type="text" id="login-name" class="input-Style login-name" maxlength="15" required>
         </form>
         <h3 id="greeting" class="hidden"></h3>
-            
+
     </div>
-    <div class="todo-container" >
-        <form id="todo-form" class="hidden">
-            <h3>What is your plan for today?</h3>
-            <input type="text" id="todo-input" class="input-Style todo-input">
+    <div class="todo-container hidden">
+        <form id="todo-form">
+            <h3>What is your plan for today? (max 3 todos)</h3>
+            <input type="text" id="todo-input" class="input-Style todo-input" required>
         </form>
+        <h5 class="hidden todo-info" id="todo-info">TODAY's TODO</h5>
         <ul id="todo-list"></ul>
+        <h6 class="todo-clear-row" id="todo-clear-row">
+            <span class="clear-i"><i class="fa-solid fa-xmark"></i></span>
+            <span>CLEAR</span>
+        </h6>
     </div>
     <div class="quote-container hidden">
-        <span id="quote">명언</span>
-        <span id="author">명언</span>
+        <span id="quote"></span>
+        <span id="author"></span>
     </div>
-    
+
     <script src="js/greeting.js"></script>
     <script src="js/background.js"></script>
     <script src="js/weather.js"></script>
