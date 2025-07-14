@@ -37,7 +37,7 @@ out/
 
 ## git pages 설정
 1. GitHub 저장소 > Settings > Pages
-2. Source: GitHub Actions 선택
+2. Source: Deploy from branch 선택 -> branch: gh-pages, folder: /root 선택
 3. 몇 분 안에 자동으로 배포됨
 확인 URL:
 https://mignonwhale.github.io/portfolio-gallery/
