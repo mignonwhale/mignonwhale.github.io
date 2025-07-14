@@ -11,9 +11,37 @@
 
 
 # 깃헙 블로그
-- 레파지토리 생성
-- git 설정
-- github 블로그 설정
+## 레파지토리 생성
+
+## github Action 설정 (자동배포설정)
+1. next.config.js 파일 업데이트 
+```
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+output: 'export',
+basePath: 'https://mignonwhale.github.io/portfolio-gallery/', // 깃허브 저장소 이름
+images: {
+unoptimized: true,
+},
+};
+
+module.exports = nextConfig;
+```
+2. .github/workflows/deploy.
+3. .gitignore에 빌드결과 폴더 넣기
+```
+out/
+```
+4. main 브랜치에 push 하면 자동 배포
+
+## git pages 설정
+1. GitHub 저장소 > Settings > Pages
+2. Source: gh-pages 브랜치 선택, 루트 / 선택 후 저장
+3. 몇 분 안에 자동으로 배포됨
+확인 URL:
+https://your-username.github.io/your-repo-name/
+
+   
 
 # 포트폴리오
 
