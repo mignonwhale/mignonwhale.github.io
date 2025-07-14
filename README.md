@@ -7,7 +7,8 @@
 - React
 - Next.js
 - Tailwind CSS
-- github blog
+- github pages
+- github actions
 
 
 # 깃헙 블로그
@@ -27,7 +28,7 @@ unoptimized: true,
 
 module.exports = nextConfig;
 ```
-2. .github/workflows/deploy 생성
+2. .github/workflows/deploy.yml 생성
 3. .gitignore에 빌드결과 폴더 넣기
 ```
 out/
@@ -39,7 +40,7 @@ out/
 2. Source: GitHub Actions 선택
 3. 몇 분 안에 자동으로 배포됨
 확인 URL:
-https://your-username.github.io/your-repo-name/
+https://mignonwhale.github.io/portfolio-gallery/
 
    
 
