@@ -1,3 +1,6 @@
+/**
+ * @file Layout component for the portfolio gallery application.
+ */
 import './globals.css';
 
 export default function Layout({
