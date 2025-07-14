@@ -16,6 +16,11 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
+      - name: Enable Corepack & install Yarn 4 (Berry)
+        run: |
+          corepack enable
+          corepack prepare yarn@4.9.2 --activate
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
