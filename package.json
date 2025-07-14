@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "deploy": "yarn build && yarn export"
+    "deploy": "yarn build"
   },
   "packageManager": "yarn@4.9.2",
   "devDependencies": {
