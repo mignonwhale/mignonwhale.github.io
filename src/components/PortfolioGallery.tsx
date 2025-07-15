@@ -10,6 +10,7 @@ type PortfolioItem = {
   year: number;
   preview: string;
   link: string;
+  skills?: string[];
 };
 
 const portfolioItems: PortfolioItem[] = [
@@ -19,24 +20,25 @@ const portfolioItems: PortfolioItem[] = [
     year: 2025,
     preview: '/main-page.png',
     link: 'https://calendar-booking-app-nine.vercel.app/calendar/mignonwhale',
+    skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'supabase'],
   },
   // {
   //   id: 2,
-  //   title: 'TBD',
+  //   title: 'TBD1',
   //   year: 2025,
   //   preview: '/main-page-mobile.png',
   //   link: 'https://calendar-booking-app-nine.vercel.app/calendar/mignonwhale',
   // },
   // {
   //   id: 3,
-  //   title: 'TBD',
+  //   title: 'TBD2',
   //   year: 2025,
   //   preview: '/bulk-insert.png',
   //   link: 'https://calendar-booking-app-nine.vercel.app/calendar/mignonwhale',
   // },
   // {
   //   id: 4,
-  //   title: 'TBD,
+  //   title: 'TBD3',
   //   year: 2025,
   //   preview: '/datepicker.png',
   //   link: 'https://calendar-booking-app-nine.vercel.app/calendar/mignonwhale',
@@ -110,9 +112,19 @@ export default function PortfolioGallery() {
 
 
                   {/* 텍스트 영역 */}
-                  <div className="flex-[1] text-white text-center py-3 flex flex-col gap-3">
-                    <p className="text-xl font-semibold">{item.title}</p>
-                    <p className="text-base">{item.year}</p>
+                  <div className="flex-[1] text-white text-center py-3 flex flex-col gap-2">
+                    <p className="text-md font-semibold">{item.title}</p>
+                    <p className="text-sm">{item.year}</p>
+                    <div className="flex flex-wrap justify-center gap-1">
+                      {item.skills?.map((skill, index) => (
+                        <span
+                          key={index}
+                          className="bg-white/10 text-gray-400 text-xs px-2 pb-1 rounded"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Link>
