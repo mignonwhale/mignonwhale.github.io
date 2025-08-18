@@ -96,7 +96,7 @@ export default function PortfolioGallery() {
                   </div>
 
                   {/* 텍스트 영역 */}
-                  <div className="flex-[1] text-white text-center py-2 flex flex-col gap-2">
+                  <div className="flex-[1] text-white text-center py-8 flex flex-col gap-2">
                     <p className="text-md font-semibold">{item.title}</p>
                     <p className="text-xs">{item.year}</p>
                     <div className="flex flex-wrap justify-center gap-1">

@@ -13,6 +13,7 @@ export default function Layout({
       <head>
         <title>Portfolio Gallery</title>
         <meta name="description" content="mignonwhale's Portfolio Gallery" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body>
         {children}
