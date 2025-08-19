@@ -29,6 +29,14 @@ const portfolioItems: PortfolioItem[] = [
     preview: '/ai_dashboard-home.png',
     link: 'https://ai-dashboard-beta-mocha.vercel.app/',
     skills: ['Claude Code', 'Figma make', 'ChatGPT', 'Gimini AI API'],
+  },
+  {
+    id: 3,
+    title: 'QR systme(demo)',
+    year: 2025,
+    preview: '/qr_admin.png',
+    link: 'https://qr-system-gold.vercel.app/admin',
+    skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'localStorage'],
   }
 ];
 
