@@ -2,6 +2,8 @@
  * @file Layout component for the portfolio gallery application.
  */
 import './globals.css';
+import Footer from '@/components/Footer';
+
 
 export default function Layout({
   children,
@@ -17,6 +19,7 @@ export default function Layout({
       </head>
       <body>
         {children}
+        <Footer />
       </body>
     </html>
   );
