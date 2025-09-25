@@ -127,7 +127,7 @@ export default function PortfolioGallery() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group relative bg-black border border-white/20 cursor-pointer overflow-hidden w-[375px] block ${
-                  isHovered ? 'h-[600px] scale-[1.03] transition-all duration-500' : 'h-[450px]'
+                  isHovered ? 'h-[600px] transition-all duration-500' : 'h-[450px]'
                 }`}
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
