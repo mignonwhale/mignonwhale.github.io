@@ -7,7 +7,7 @@ import Link from "next/link";
 type PortfolioItem = {
   id: number;
   title: string;
-  year: number;
+  year: string;
   preview: string;
   link: string;
   skills?: string[];
@@ -17,7 +17,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: 'Calendar Booking App',
-    year: 2025,
+    year: '2025.06',
     preview: '/calendar-booking-app-main.png',
     link: 'https://calendar-booking-app-nine.vercel.app/calendar/mignonwhale',
     skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'supabase'],
@@ -25,7 +25,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 2,
     title: '[Vibe coding] AI Dashboard',
-    year: 2025,
+    year: '2025.08',
     preview: '/ai-dashboard-main.png',
     link: 'https://ai-dashboard-beta-mocha.vercel.app/',
     skills: ['Claude Code', 'Figma make', 'ChatGPT', 'Gimini AI API'],
@@ -33,7 +33,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 3,
     title: 'Game Promotion Website',
-    year: 2025,
+    year: '2025.09',
     preview: '/game-promotion-main.png',
     link: 'https://unicon-demo.vercel.app/',
     skills: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
