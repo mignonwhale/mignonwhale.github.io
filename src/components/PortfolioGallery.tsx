@@ -11,6 +11,7 @@ type PortfolioItem = {
   preview: string;
   link: string;
   skills?: string[];
+  description?: string;
 };
 
 const portfolioItems: PortfolioItem[] = [
@@ -20,24 +21,18 @@ const portfolioItems: PortfolioItem[] = [
     year: '2025.06',
     preview: '/calendar-booking-app-main.png',
     link: 'https://calendar-booking-app-nine.vercel.app/calendar/mignonwhale',
-    skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'supabase'],
+    skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    description: 'Supabase 기반의 실시간 예약 관리 시스템. 직관적인 스케줄링 인터페이스'
   },
   {
     id: 2,
-    title: '[Vibe coding] AI Dashboard',
-    year: '2025.08',
-    preview: '/ai-dashboard-main.png',
-    link: 'https://ai-dashboard-beta-mocha.vercel.app/',
-    skills: ['Claude Code', 'Figma make', 'ChatGPT', 'Gimini AI API'],
+    title: 'Next.js + Supabase boilerplate',
+    year: '2025.10',
+    preview: '/nextjs-supabase-boilerplate-main.png',
+    link: 'https://launch-kit-gold.vercel.app',
+    skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Tiptap'],
+    description: '인증, 데이터베이스, 리치 에디터가 사전 구성된 프로덕션 레디 스타터 킷'
   },
-  {
-    id: 3,
-    title: 'Game Promotion Website',
-    year: '2025.09',
-    preview: '/game-promotion-main.png',
-    link: 'https://unicon-demo.vercel.app/',
-    skills: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-  }
 ];
 
 const getItemIcon = (itemId: number) => {
@@ -149,9 +144,10 @@ export default function PortfolioGallery() {
                   </div>
 
                   {/* 텍스트 영역 */}
-                  <div className="flex-[1] text-white text-center py-8 flex flex-col gap-2">
+                  <div className="flex-[1] text-white text-center py-8 flex flex-col gap-4">
                     <p className="text-md font-semibold">{item.title}</p>
                     <p className="text-xs">{item.year}</p>
+                    <p className="text-md font-semibold px-5 break-keep">{item.description}</p>
                     <div className="flex flex-wrap justify-center gap-1">
                       {item.skills?.map((skill, index) => (
                         <span
