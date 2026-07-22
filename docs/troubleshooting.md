@@ -23,14 +23,22 @@ Next.js(15.3.5) dev overlay 코드 일부가 `typeof localStorage !== 'undefined
 
 ### 해결
 
-`node --no-experimental-webstorage` 플래그로 Next CLI를 직접 실행하도록 [package.json](../package.json)의 스크립트를 수정했다.
+처음에는 `node --no-experimental-webstorage`를 `package.json` 스크립트에 직접 하드코딩했는데, 이렇게 하면 이 플래그 자체가 없는 구버전 Node(예: GitHub Actions의 Node 20)에서 `bad option`으로 빌드가 죽는 문제가 생긴다:
 
-```json
-"dev": "node --no-experimental-webstorage node_modules/next/dist/bin/next dev",
-"build": "node --no-experimental-webstorage node_modules/next/dist/bin/next build",
+```
+Run yarn build
+/opt/hostedtoolcache/node/20.20.2/x64/bin/node: bad option: --no-experimental-webstorage
+Error: Process completed with exit code 9.
 ```
 
-`NODE_OPTIONS` 환경변수 대신 이 방식을 쓴 이유는, `VAR=value command` 형태의 셸 문법이 Windows(cmd.exe)에서는 동작하지 않아 `cross-env` 같은 별도 의존성 없이 OS에 상관없이 동일하게 동작하도록 하기 위함이다.
+그래서 [scripts/run-next.js](../scripts/run-next.js) 래퍼 스크립트를 만들어, 실행 중인 Node가 해당 플래그를 지원하는지 먼저 프로브(probe)한 뒤 지원할 때만 붙이도록 처리했다. Node 20(CI)에서는 플래그 없이, Node 25(로컬)에서는 플래그를 붙여서 각각 정상 동작한다.
+
+```json
+"dev": "node scripts/run-next.js dev",
+"build": "node scripts/run-next.js build",
+```
+
+`NODE_OPTIONS` 환경변수 대신 이 방식을 쓴 이유는, `VAR=value command` 형태의 셸 문법이 Windows(cmd.exe)에서는 동작하지 않아 `cross-env` 같은 별도 의존성 없이 OS/Node 버전에 상관없이 동일하게 동작하도록 하기 위함이다.
 
 ### 참고
 
